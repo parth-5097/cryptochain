@@ -1,6 +1,3 @@
 node_modules
-client/dist/index.html
-client/dist/src.a0a24619.js
-client/dist/src.a0a24619.js.map
-client/dist/src.e31bb0bc.js
-client/dist/src.e31bb0bc.js.map
+client/dist
+.cache

@@ -83,6 +83,7 @@ describe('TransactionPool', () => {
         it('clears the pool of any existing blockchain transaction', () => {
             const blockchain = new Blockchain();
             const expectedTransactionMap = {};
+            let count = 0;
 
             for (let i = 0; i < 6; i++) {
                 const transaction = new Wallet().createTransaction({
@@ -94,6 +95,7 @@ describe('TransactionPool', () => {
                 if (i % 2 === 0) {
                     blockchain.addBlock({ data: [transaction] });
                 } else {
+                    count++;
                     expectedTransactionMap[transaction.id] = transaction;
                 }
             }
